@@ -2,7 +2,8 @@ FROM ubuntu:20.04 AS build
 
 ARG DOCTL_VERSION=1.64.0
 
-ADD https://github.com/digitalocean/doctl/releases/download/v${DOCTL_VERSION}/doctl-${DOCTL_VERSION}-linux-amd64.tar.gz /doctl-${DOCTL_VERSION}-linux-amd64.tar.gz
+ADD https://github.com/digitalocean/doctl/releases/download/v${DOCTL_VERSION}/doctl-${DOCTL_VERSION}-linux-amd64.tar.gz \
+  /doctl-${DOCTL_VERSION}-linux-amd64.tar.gz
 
 RUN mkdir -p /dist \
   && tar --extract --directory /dist --file /doctl-${DOCTL_VERSION}-linux-amd64.tar.gz
