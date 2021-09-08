@@ -14,4 +14,4 @@ RUN apt-get update \
   && dpkg -i /tmp/cinc.deb \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/log/*log /var/log/apt/* /var/lib/dpkg/*-old /var/cache/debconf/*-old /tmp/cinc.deb
 
-VOLUME [ "/opt/chef"]
+VOLUME [ "/opt/cinc"]
