@@ -9,7 +9,7 @@ FROM busybox
 
 COPY --from=build /tmp/cinc.rpm  /tmp/cinc.rpm
 
-RUN rpm2cpi /tmp/cinc.rpm | cpio -idmv \
+RUN rpm2cpio /tmp/cinc.rpm | cpio -idmv \
   && rm -rf /tmp/cinc.rpm
 
 VOLUME [ "/opt/cinc"]
